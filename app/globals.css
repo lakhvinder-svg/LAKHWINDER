@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-dark-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-dark-bg text-white;
+  }
+}
+
+@layer components {
+  /* Cards */
+  .card-premium {
+    @apply glass rounded-2xl border border-gold/10 backdrop-blur-glass transition-all duration-300 hover:border-gold/30 hover:shadow-glow;
+  }
+
+  .card-gradient {
+    @apply bg-gradient-to-br from-dark-card via-dark-bg to-dark-card border border-gold/10;
+  }
+
+  /* Glass Morphism */
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl;
+  }
+
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-xl border border-white/5 rounded-xl;
+  }
+
+  /* Typography */
+  .gradient-gold-text {
+    @apply bg-gradient-to-r from-gold via-yellow-400 to-gold bg-clip-text text-transparent;
+  }
+
+  .gradient-blue-text {
+    @apply bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply px-8 py-3 rounded-lg font-semibold bg-gold text-dark-bg hover:bg-yellow-400 transition-all duration-300 shadow-lg hover:shadow-glow;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 rounded-lg font-semibold border-2 border-gold text-gold hover:bg-gold/10 transition-all duration-300;
+  }
+
+  /* Inputs */
+  .input-premium {
+    @apply w-full px-4 py-3 rounded-lg bg-dark-card border border-dark-border text-white placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold/50 transition-all duration-200;
+  }
+
+  /* Animations */
+  .animate-float {
+    @apply animate-float;
+  }
+
+  .animate-glow {
+    @apply animate-glow;
+  }
+
+  /* Badges */
+  .badge-gold {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-gold/20 text-gold border border-gold/30;
+  }
+
+  .badge-blue {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30;
+  }
+
+  /* Section Backgrounds */
+  .section-dark {
+    @apply bg-dark-bg;
+  }
+
+  .section-gradient {
+    @apply bg-gradient-to-b from-dark-bg via-dark-card to-dark-bg;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(15, 20, 25);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(212, 175, 55);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(230, 190, 70);
+}
